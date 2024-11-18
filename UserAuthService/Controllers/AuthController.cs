@@ -35,16 +35,16 @@ namespace UserAuthService.Controllers
             return Ok(response);
         }
 
-    [HttpPost("verify-otp")]
-    public async Task<IActionResult> VerifyOtp([FromBody] VerifyOtpRequestDto request)
-    {
-        var response = await _authService.VerifyOtpAsync(request.Username, request.Otp);
+        [HttpPost("verify-otp")]
+        public async Task<IActionResult> VerifyOtp([FromBody] VerifyOtpRequestDto request)
+        {
+            var response = await _authService.VerifyOtpAsync(request.Username, request.Otp);
 
-        if (response == null)
-            return Unauthorized("Invalid OTP.");
+            if (response == null)
+                return Unauthorized("Invalid OTP.");
 
-        return Ok(response); // Return the LoginResponseDto object
-    }
+            return Ok(response); // Return the LoginResponseDto object
+        }
 
 
         
