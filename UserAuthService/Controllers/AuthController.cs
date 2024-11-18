@@ -43,7 +43,7 @@ namespace UserAuthService.Controllers
             if (response == null)
                 return Unauthorized("Invalid OTP.");
 
-            return Ok(response); // Return the LoginResponseDto object
+            return Ok(response);
         }
 
 

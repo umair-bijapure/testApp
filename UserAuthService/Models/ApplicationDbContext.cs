@@ -9,7 +9,7 @@ namespace UserAuthService.Models
         {
         }
 
-        // Define a DbSet for each entity you want to store in the database
+    
         public DbSet<User> Users { get; set; }
     }
 }
